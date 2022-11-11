@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JAVASCRIPT</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>Shopping List</h1><br>
+        <p id="first">Get it done today</p>
+       
+            <input id="input-task" placeholder="New Task" >
+            <button id="add-btn" type="button">
+              Add Tasks
+            </button>
+          </div>
+          <div>    
+            <ul id="task-table">
+            </ul>
+          
+        
+        <ul>
+            <li>Notebook</li>
+            <li>Jello</li>
+            <li>Spinach</li>
+            <li>Rice</li>
+            <li>Birthday cake</li>
+            <li>Candles</li>
+        </ul>
+
+    </body>
+    <script>
+        document.getElementById('add-btn').addEventListener('click', newTask);
+    
+    function newTask(){
+      const inputTask = document.getElementById('input-task').value;
+    
+      var li = document.createElement('li');
+      var t = document.createTextNode(inputTask); //remove quotes here
+      li.appendChild(t);
+      document.getElementById('task-table').appendChild(li);
+    }
+    </script> 
+</html>
