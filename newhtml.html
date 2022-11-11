@@ -1,0 +1,40 @@
+
+
+
+
+
+<html>  
+<head>  
+  <script type="text/javascript" src="abc.js"></script>  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>JAVASCRIPT</title>
+</head>  
+<body>  
+  <div id="Html">
+    <input id="input-task" placeholder="New Task" >
+    <button id="add-btn" type="button">
+      Add Tasks
+    </button>
+  </div>
+  <div>    
+    <ul id="task-table">
+      <li>Rice</li>
+      <li>Spinach</li>
+      <li>Jello</li>
+      <li>Butter</li>
+    </ul>
+  </div>
+</body> 
+<script>
+    document.getElementById('add-btn').addEventListener('click', newTask);
+
+function newTask(){
+  const inputTask = document.getElementById('input-task').value;
+
+  var li = document.createElement('li');
+  var t = document.createTextNode(inputTask); //remove quotes here
+  li.appendChild(t);
+  document.getElementById('task-table').appendChild(li);
+}
+</script> 
+</html> 
